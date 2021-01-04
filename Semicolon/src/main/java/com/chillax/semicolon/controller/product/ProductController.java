@@ -15,4 +15,9 @@ public class ProductController {
 	public String goProductDetail() {
 		return "/product/productDetail";
 	}
+	
+	@RequestMapping("login.me")
+	public String goLoginView() {
+		return "/member/login";
+	}
 }

@@ -21,17 +21,17 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">세미콜론; 접속사를 통해 연결되는 문장들처럼<br> 중고 거래부터 동네 정보까지, 이웃과 함께 해요<br> 가깝고 따뜻한 당신의 근처를 만들어요.
-          </h1>
+          <h1 class="h2_class">;세미콜론</h1>
+          <p>중고 거래부터 동네 정보까지, 이웃과 함께 해요.<br> 가깝고 따뜻한 근처의 마켓을 만들어요.</p>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form>
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="동네 이름, 물품명 등을 검색해보세요!">
+                <input type="email" class="form-control " placeholder="동네 이름, 물품명 등을 검색해보세요!">
               </div>
               <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn btn-danger disabled">검색</button>
+                <button type="submit" class="btn btn-block btn btn-danger disabled">검색</button>
               </div>
             </div>
           </form>
