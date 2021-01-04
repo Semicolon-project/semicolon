@@ -4,45 +4,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
   <title>세미콜론</title>
-
-  <!-- Bootstrap core CSS -->
-
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/bootstrap/css/bootstrap.css">
-
-  <!-- Custom fonts for this template -->
-
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/simple-line-icons/css/simple-line-icons.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  <!-- Custom styles for this template -->
-
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/landing-page.min.css">
-
-
-<meta charset="UTF-8">
-<title>세미콜론</title>
 </head>
 <body>
 <c:import url="common/header.jsp" />
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">;세미콜론[로고]</a>
-      <a class="btn btn-danger disabled btn-sm"  href="#">로그인</a>
-      <a class="btn btn-danger disabled btn-sm" href="#">회원가입</a>
-    </div>
-  </nav>
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
@@ -51,7 +22,6 @@
       <div class="row">
         <div class="col-xl-9 mx-auto">
           <h1 class="mb-5">세미콜론; 접속사를 통해 연결되는 문장들처럼<br> 중고 거래부터 동네 정보까지, 이웃과 함께 해요<br> 가깝고 따뜻한 당신의 근처를 만들어요.
-          
           </h1>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
@@ -68,8 +38,9 @@
         </div>
       </div>
     </div>
+    
   </header>
-
+<button onclick="location.href='list.pr'">임시 상품리스트 페이지</button>
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
@@ -185,6 +156,7 @@
         </div>
       </div>
     </div>
+    
   </section>
 
   <!-- Footer -->
@@ -234,17 +206,8 @@
     </div>
   </footer>
 
-
-  
-  <script src="<c:url value="/resources/vendor/jquery/jquery.min.js" />"></script>
-  <script src="<c:url value="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js" />"></script>
-
-  
-
-
-
+  <script src="<c:url value="/vendor/bootstrap/js/bootstrap.bundle.min.js" />"></script>
 
 <c:import url="common/footer.jsp" />
 </body>
-
 </html>
