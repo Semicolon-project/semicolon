@@ -15,8 +15,8 @@ public class MainController {
     @RequestMapping(value="/")
     public ModelAndView main(ModelAndView mv) {
     	
-    	int test = testService.getMain();
-    	mv.addObject("test", test);
+//    	int test = testService.getMain();
+//    	mv.addObject("test", test);
     	mv.setViewName("index");
       	return mv;
     }
