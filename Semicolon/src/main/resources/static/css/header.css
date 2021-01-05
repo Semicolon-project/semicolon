@@ -30,6 +30,7 @@
 }
 
 	/* 로그인 창 */
+	#login_container{background-color: #ffffff;}
 	#loginLabel { font-size: 35px; font-weight: 600; text-align: center; color : rgb(76,76,76); }
 	#loginDiv { text-align: center; }
      #login_space0{ height : 25px; }
