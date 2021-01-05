@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>세미콜론</title>
+
 <!-- jQuery 첨부 -->
 <script src="/js/jquery-3.5.1.min.js"></script>
 <!-- Modal코드  -->
@@ -23,9 +24,10 @@
   <!-- Custom styles for this template -->
   <link rel="stylesheet" type="text/css" href="/css/landing-page.css">
   <link rel="stylesheet" type="text/css" href="/css/landing-page.min.css">
-
 <!-- 부트스트랩 첨부 끝 -->
 <!-- 경로는 스프링부트 기준에서 src/main/resources/static/ 이다 -->
+<link rel="stylesheet" href="/css/header.css">
+
 </head>
 <body>
 <!-- 메뉴바는 어느 페이지든 포함하고 있을 테니 여기서 contextPath 변수 값 만들기  -->
