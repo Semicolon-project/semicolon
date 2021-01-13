@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="productMapper">
+	<select id="getProductListAll" resultType="Product">
+		select * from product
+		join image using(pr_no)
+		where pr_status='Y'
+		and img_level=0
+		order by pr_date desc
+	</select>
+	
+	<select id="getListCountAll" resultType="_int">
+		select count(*) from product where pr_status='Y'
+	</select>
+	
+	<select id="getProductCategoryAll" resultType="ProductCategory">
+		select * from product_category
+	</select>
+	
+	<insert id="insertProduct" parameterType="Product">
+		insert into product
+		values(seq_pr_no.nextval, #{pr_title}, #{pr_content}, sysdate, default, default, #{pr_price}, default, 'asdf', #{pr_category})
+	</insert>
+	
+	<insert id="insertImage">
+		insert all
+		<foreach collection="list" item="image" index="index">
+			into image values(get_seq_img_no, #{image.img_name}, #{image.img_level}, default, seq_pr_no.currval)
+		</foreach>
+		select * from dual
+	</insert>
+	
+	<select id="selectProduct" resultType="Product">
+		select pr_no, pr_title, pr_content, pr_date, pr_count, pr_like, pr_price, mem_id, cate_name "pr_category" from product
+	join product_category on(pr_category = cate_code)
+		where pr_no=#{pr_no}
+		and pr_status='Y'
+	</select>
+	
+	<select id="selectProductImages" resultType="string">
+		select img_name from image
+		where pr_no=#{pr_no} and img_delete='Y'
+		order by img_level 
+	</select>
+	
+	<update id="updateProductCount">
+		update product
+		set pr_count=pr_count+1
+		where pr_no=#{pr_no}
+	</update>
+	
+	<update id="deleteProduct">
+		update product
+		set pr_status='N'
+		where pr_no=#{pr_no}
+	</update>
+</mapper>

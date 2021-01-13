@@ -4,16 +4,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>세미콜론</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>세미콜론</title>
 <!-- jQuery 첨부 -->
 <script src="/js/jquery-3.5.1.min.js"></script>
 
 <!-- 부트스트랩 첨부 시작 -->
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.css"> 
-
+  <script src="/vendor/bootstrap/js/bootstrap.js"></script>
   <!-- Custom fonts for this template -->
   <link rel="stylesheet" type="text/css" href="/vendor/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/vendor/simple-line-icons/css/simple-line-icons.css">
@@ -31,8 +33,20 @@
 <body>
 <!-- 메뉴바는 어느 페이지든 포함하고 있을 테니 여기서 contextPath 변수 값 만들기  -->
 <!-- 모달 -->
-       <!-- 로그인 창  -->
-		<div id="login" class="modal fade in">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" onclick="main()">;세미콜론[로고]</a>
+     <div>
+      	<a class="menu_right" data-toggle="modal" data-target="#login">로그인</a>
+    	<a class="menu_right" href="join()">회원가입</a>
+      </div>      
+    </div>
+  </nav>
+  
+   <!-- 로그인 창  -->
+		<div id="login" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 			<div id="login_container" class="modal-dialog">
 			   	<div id="login_spaceStart"></div>
 				<p id="loginLabel">LOGIN</p>
@@ -94,19 +108,7 @@
 		</div>
 	</div>
 <!-- 모달 -->
-
-
   
-  <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-      <a class="navbar-brand" onclick="main()">;세미콜론[로고]</a>
-     <div>
-      	<a class="menu_right" data-toggle="modal" data-target="#login">로그인</a>
-    	<a class="menu_right" href="join()">회원가입</a>
-      </div>      
-    </div>
-  </nav>
 
 <script>
 function main(){

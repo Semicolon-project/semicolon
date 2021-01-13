@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias type="com.chillax.semicolon.product.model.vo.Product" alias="Product"/>
+		<typeAlias type="com.chillax.semicolon.product.model.vo.ProductCategory" alias="ProductCategory"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mapper/testMapper.xml"></mapper>
+		<mapper resource="mapper/productMapper.xml"></mapper>
+	</mappers>
+</configuration>

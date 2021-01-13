@@ -25,6 +25,21 @@
 	cursor: pointer;
 }
 
+.back_icon{
+	background-image: url("/images/back.png");
+	padding:10px;
+	cursor: pointer;
+}
+.next_icon{
+	background-image: url("/images/next.png");
+	padding:10px;
+	cursor: pointer;
+}
+.write_icon{
+	background-image: url("/images/write.png");
+	padding:10px;
+}
+
 #login-right{
 	margin-left:500px;
 }

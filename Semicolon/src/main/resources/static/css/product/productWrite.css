@@ -1,0 +1,83 @@
+@charset "UTF-8";
+#product_write_div{
+	margin: 30px 0;
+
+}
+#write_head{ 
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.input_div{
+	padding: 10px;
+	border-bottom: 1px solid gray;
+}
+
+#product_write_div input[type=text]{ 
+	font-size: 18px;
+	padding: 5px; 
+	border: none; 
+	outline: none; 
+	width:100%;
+}
+#product_write_div input[type=file]{
+	display: none;
+}
+#product_write_div select{
+	font-size: 18px;
+	padding: 5px 2px; 
+	border: none;
+	width: 100%;
+}
+#product_write_div select option{
+	width: 100%;
+	font-size: 15px;
+}
+
+#product_write_div textarea{
+	resize: none;
+	font-size: 15px;
+	margin: 20px 0;
+}
+.each_picture{
+	height: 260px;
+	cursor: pointer;
+    background-color:rgba(220, 220, 220, 0.5);
+    background-image: url("/images/picture.png");
+	background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 12em;
+    font-size:14px;
+}
+.each_picture:hover{
+	border: 1px solid rgb(220,220,220);
+}
+.each_picture img{
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#write_btn {
+	margin: 20px 0;
+	text-align: center;
+}
+#write_btn div{
+	display: inline-block;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 5px;
+    font-size: 17px;
+    border-color: #dc3545;
+    width: 130px;
+    height: 45px;
+    line-height: 2.5em;
+    cursor: pointer;
+}
+
+#write_btn span{
+	margin-right: 5px;
+}

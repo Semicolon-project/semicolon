@@ -3,47 +3,52 @@ section{
 	margin: 50px 0 ;
 }
 #product_images_slide{	
-	width: 100%;
+	position: relative;
 }
 
 #slide_track{
-	width:900px;
-	height: 500px;
-	margin: 0 auto;
-	overflow: hidden;
-
-}
-#slide_track div{
-	width: 677px;
-	height: 500px;
-
-	display: inline-block;
+	width: 700px;
+    height: 500px;
+    display: flex;
+    margin: 0 auto;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    
 }
 
-#slide_track img{
+#slide_track a{
+	display: block;
 	border-radius: 10px;
+	background-position:center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 700px;
+	height: 500px;
 }
-.current_image{
-	
+  #slide_track li{
+	display: block;
+	transition: transform 0.5s ease 0s;
 }
+
+
 /* //////////////////////////////// */
 #product_seller_profile{
+	display: flex;
+	width: 730px;
 	margin: 15px auto;
 	border-bottom: 1px solid #e9ecef;
 	padding-bottom: 15px;
 }
-#product_profile_left{
-	display: inline-block;	
-}
-#product_profile_left #nickname{
+
+#product_profile_content #nickname{
 	font-size: 17px;
 	font-weight: 600;
 }
-#product_profile_left #address{
+#product_profile_content #address{
 	font-size: 15px;
 }
 #product_profile_image{
-	display: inline-block;
 	vertical-align: super;
 	margin-right: 10px;
 }
@@ -52,8 +57,27 @@ section{
 	border-radius: 50%;
 }
 
+#btns_div{
+	flex:1;
+	text-align: right;
+	cursor: pointer;
+}
+
+#btns_div div{
+	display: inline-block;
+	color: #fff;
+    background-color: #dc3545;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 10px;;
+    opacity: 0.8;
+    
+}
+
+
 /*///////////////////////////  */
 #product_info{
+	width: 730px;
 	margin: 15px auto;
 	padding: 20px 0;
 }
@@ -74,7 +98,52 @@ section{
 	font-weight: bold;
 }
 #product_info #product_content{
-	margin:20px 0;
+	width: 100%;
 	font-size: 17px;
 }
 
+
+#btns_div #update_btn{
+	
+}
+/* /////////////// */
+#slide_move_btns{
+	position: relative;
+	width: 800px;
+	margin: 0 auto;
+	top: -250px;
+}
+
+.back_icon{
+	float: left;
+}
+.next_icon{
+	float: right;
+}
+
+
+/*//////////////////////////  */
+@media(max-width:992px){
+	#slide_move_btns{
+		width: 650px;
+	}
+	#slide_move_btns span{
+		 background-color: rgba(999,999,999, 0.5)
+	}
+}
+@media(max-width: 750px){
+	#slide_track{
+		width: 550px;
+		height: 350px;
+	}
+	
+	#slide_track a{
+		width:500px;
+		height: 350px;
+	}
+	#slide_move_btns{
+		width: 450px;
+		top: -200px; 
+	}
+	
+}
