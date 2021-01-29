@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,9 +108,75 @@
 		</div>
 	</div>
 <!-- 모달 -->
-  
+
+<!-- 메시지 영역 -->
+<!-- 메시지 버튼  -->
+<a id="message_a"><span class="icon message_icon"></span></a>
+<div id="div_message">
+<div id="message1">
+	<ul class="message_list">
+		<li class="selected_message">이름1</li>
+		<li>이름2</li>
+	</ul> 
+</div>
+<div id="message2">
+	<span class="icon close_icon"></span>
+	<div>
+		<div class="message_box">
+			<ul class="your_message">
+				<li class="msg_content"><span>선제시 ㄱㄱ</span></li>
+				<li class="msg_time"><span>13:04</span></li>
+			</ul>	
+			<ul class="my_message">
+				<li class="msg_content"><span>님이 먼저 ㄱㄱ</span></li>
+				<li class="msg_time"><span>13:04</span></li>
+			</ul>	
+			<ul class="my_message">
+				<li class="msg_content"><span>7.5?</span></li>
+				<li class="msg_time"><span>13:04</span></li>
+			</ul>	
+			<ul class="your_message">
+				<li class="msg_content"><span>ㅇㅋㅇㅋ</span></li>
+				<li class="msg_time"><span>13:04</span></li>
+			</ul>	
+		</div>
+		<form id="msg_form">
+			<input type="text" id="msg_input"><input type="button" value="보내기" id="msg_btn">
+		</form>
+	</div>
+</div>  
+</div>
+<!-- 메시지 영역 -->
 
 <script>
+$(function(){
+	$('#div_message').on("click",".close_icon", function(){
+		$("#div_message").css("bottom","-300px");
+		$('#message_a').css("display","block");
+	});
+	$(document).on("click","#message_a", function(){
+		$("#div_message").css("bottom","0px");
+		$('#message_a').css("display","none");
+	});
+	$("#msg_form").on("click","#msg_btn", function(e){
+		e.preventDefault();
+		if($("#msg_input").val()==""){
+			alert("내용을 입력해주세요.");
+			$("#msg_input").focus();
+		}else{
+			$.ajax({
+				url: "sendMsg",
+				data: {"message":$('#msg_input').val()},
+				success:function(data){
+					alert("성공:"+data);
+				},
+				error:function(data){
+					alert("ajax 통신 에러")
+				}
+			});
+		}
+	});
+});
 function main(){
 	location.href="/";
 }

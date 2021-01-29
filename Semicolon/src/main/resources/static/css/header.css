@@ -9,6 +9,7 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	cursor:pointer;
 }
 .search_icon{
 	background-image: url("/images/icon_search.png");
@@ -16,30 +17,129 @@
 	position: absolute;
     left: 570px;
     top: 60px;
- 	cursor: pointer;
 }
 
 .like_icon{
 	background-image: url("/images/like.png");
 	padding:10px;
-	cursor: pointer;
 }
 
 .back_icon{
 	background-image: url("/images/back.png");
 	padding:10px;
-	cursor: pointer;
 }
 .next_icon{
 	background-image: url("/images/next.png");
 	padding:10px;
-	cursor: pointer;
+
 }
 .write_icon{
 	background-image: url("/images/write.png");
 	padding:10px;
 }
+.close_icon{
+	background-image: url(/images/close.png);
+    padding: 7px;
+    float: right;
+    position: absolute;
+    margin: 3px 3px 0 0;
+    right: 0;
+}
 
+#message_a{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 50%;
+	padding: 12px 10px;
+	background-color: #dc3545;
+	z-index: 999;
+}
+.message_icon{
+	background-image: url("/images/message.png");
+	padding: 15px;
+}
+
+#div_message{
+	position: fixed;
+	bottom: -300px;
+	right: 0;
+	z-index: 998;
+	border: 1px solid #ced4da;
+	width: 400px;
+	height: 300px;
+	background-color: #ffffff;
+	transition: bottom 0.2s ease 0s;
+}
+
+#div_message #message1{
+	border-right: 1px solid #ced4da;
+	width: 100px;
+	height: 300px;
+}
+#div_message #message2{
+	width: 299px;
+	height: 300px;
+	position: absolute;
+}
+#message1, #message2{
+	display: inline-block;
+}
+
+.message_list{
+	list-style: none;	
+}
+.message_list li{
+  text-align: center;	font-size: 14px; padding: 5px; 
+  border-bottom: 1px solid #ced4da;
+}
+.selected_message{
+	background-color: #c0cfdd; border-bottom: 0;}
+.message_box{
+	position: absolute; list-style: none;
+	width: 270px; margin-top: 5px;
+}
+.message_box ul{
+	margin: 10px 3px ;
+	list-style: none;
+}
+.message_box ul li span{
+	background-color: #f8f9fa;
+	padding: 5px;
+	border-radius:7px;
+}
+.my_message{
+	text-align: right;
+}
+.your_message, .my_message{
+  margin-bottom: 0;
+}
+
+.msg_content{
+	list-style: none;
+}
+.msg_time span{
+	font-size:10px; padding: 0 !important;
+	background-color: white !important;
+	
+}
+
+#msg_form{
+	position: absolute;
+	bottom: 0; display: flex;
+	width: 100%;
+}
+
+#msg_form input:first-child{
+	flex: 3; outline: none; border: 1px solid #ced4da;
+	font-size: 13px; padding: 3px;
+}
+#msg_form input:nth-child(2){flex: 1; font-size: 12px; color: #ffffff;
+	background-color: #dc3545;  border-color: #dc3545; opacity: 0.65;
+	outline: none;
+}
+
+/* //////////////// */
 #login-right{
 	margin-left:500px;
 }
